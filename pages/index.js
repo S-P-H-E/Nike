@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import { SiNike } from 'react-icons/si'
 import { BsBag } from 'react-icons/bs'
