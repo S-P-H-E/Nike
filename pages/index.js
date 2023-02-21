@@ -7,6 +7,11 @@ import { MdArrowForwardIos } from 'react-icons/md'
 import Item from '@/components/item'
 import { useSpring, animated, config } from 'react-spring';
 
+import img1 from '@/public/images/img1.webp'
+import img2 from '@/public/images/img2.webp'
+import img3 from '@/public/images/img3.webp'
+import img4 from '@/public/images/img4.webp'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -108,7 +113,7 @@ export default function Home() {
         </div>
       </nav>
       {/* Hero */}
-      <div className='flex-col justify-center py-[100px] text-[#111111]'>
+      <div className='flex-col justify-center pt-[100px] text-[#111111]'>
         <div className='mask'>
           <animated.h2 style={heroh2Animation} className='text-center'>Just In: Nike Invincible 3</animated.h2>
         </div>
@@ -119,47 +124,54 @@ export default function Home() {
           <animated.p style={heropAnimation} className='text-center my-6'>Our most cushioned road-running shoe gives you extraordinary comfort,<br/>supreme softness and lightweight support through every mile.</animated.p>
         </div>
           <div className='text-center mask'>
-            <animated.button style={herobuttonAnimation1} className='bg-[#111111] p-2 px-5 mx-2 text-white rounded-full transition-all hover:scale-110'>Shop Men's</animated.button>
-            <animated.button style={herobuttonAnimation2} className='bg-[#111111] p-2 px-5 mx-2 text-white rounded-full transition-all hover:scale-110'>Shop Women's</animated.button>
+            <animated.button style={herobuttonAnimation1} className='bg-[#111111] p-2 px-5 mx-2 text-white rounded-full'>Shop Mens</animated.button>
+            <animated.button style={herobuttonAnimation2} className='bg-[#111111] p-2 px-5 mx-2 text-white rounded-full'>Shop Womens</animated.button>
           </div>
       </div>
-      <div className='flex justify-center items-center'>
-        <animated.img style={heroImageAnimation} className=' rounded-3xl' src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="hero image"/>
+      <div className='flex justify-center items-center pt-[50px]'>
+        <div className='m-20'>
+          <h1> </h1>
+
+        </div>
+        <animated.img style={heroImageAnimation} className='h-[650px] rounded-3xl' src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="hero image"/>
+        <div className='m-20'>
+          <h1></h1>
+        </div>
       </div>
       {/* Featured Items */}
       <animated.div style={heroTrendAnimation} >
         <div className='mx-10 my-6 flex justify-between items-center'>
           <h1 className='text-xl font-medium'>Trending This Week</h1>
-          <div className='flex'>
+          {/* <div className='flex'>
             <MdArrowBackIosNew size={45} className='bg-[#E5E5E5] rounded-full p-4 m-2'/>
             <MdArrowForwardIos size={45} className='bg-[#E5E5E5] rounded-full p-4 m-2'/>
-          </div>
+          </div> */}
         </div>
         <div style={{ height: '500px', overflow: 'auto' }}>
   <div className='flex gap-10 mx-10 my-6'>
     <Item 
-      image='https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_300,c_limit/86f31dde-06ea-42dc-8516-64614e3ee408/jordan-6-rings-older-shoes-K41p0C.png'
+      image={img1}
       title='Jordan 6 Rings'
       price='R 2 299,95'
       category='Older Kids Shoes'
     />
     <Item 
-      image='https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_300,c_limit/a42a5d53-2f99-4e78-a081-9d07a2d0774a/air-force-1-07-shoe-ZLZpmn.png'
-      title="Nike Air Force 1 '07"
+      image={img2}
+      title="Nike Air Force 1 07"
       price='R 2 299,95'
-      category="Men's Shoe"
+      category="Mens Shoe"
     />
     <Item 
-      image='https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_602,c_limit/3cdbf180-ae3f-4549-a458-40d2476671a1/air-jordan-3-retro-se-older-shoes-CSgC3L.png'
+      image={img3}
       title="Air jordan 3 Retro SE"
       price='R 2 799,95'
       category="Older Kids Shoes"
     />
     <Item 
-      image='https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_308,c_limit/c6d9d042-f0b9-46a3-bd1f-04e16541a1d9/air-force-1-07-next-nature-shoes-lkVhs6.png'
-      title="Nike Air Force 1 '07"
+      image={img4}
+      title="Nike Air Force 1 07"
       price='R 2 299,95'
-      category="Wome's shoes"
+      category="Womens shoes"
     />
   </div>
 </div>
